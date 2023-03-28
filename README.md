@@ -1,26 +1,10 @@
-Signal-Server
-=================
+Тестовое задание состоит из двух частей:
 
-Documentation
--------------
+1. Подготовить Dockerfile и команду запуска docker контейнера выполняющего сборку приложения Signal Server https://github.com/signalapp/Signal-Server  
+В результате выполнения должен быть получен .jar файл приложения.
+Решением по данной задаче, должно быть 2 файла, Dockerfile и файл build.sh содержащий команды для сборки docker образа и сборки файла приложения
 
-Looking for protocol documentation? Check out the website!
-
-https://signal.org/docs/
-
-Cryptography Notice
-------------
-
-This distribution includes cryptographic software. The country in which you currently reside may have restrictions on the import, possession, use, and/or re-export to another country, of encryption software.
-BEFORE using any encryption software, please check your country's laws, regulations and policies concerning the import, possession, or use, and re-export of encryption software, to see if this is permitted.
-See <https://www.wassenaar.org/> for more information.
-
-The U.S. Government Department of Commerce, Bureau of Industry and Security (BIS), has classified this software as Export Commodity Control Number (ECCN) 5D002.C.1, which includes information security software using or performing cryptographic functions with asymmetric algorithms.
-The form and manner of this distribution makes it eligible for export under the License Exception ENC Technology Software Unrestricted (TSU) exception (see the BIS Export Administration Regulations, Section 740.13) for both object code and source code.
-
-License
----------------------
-
-Copyright 2013-2022 Signal Messenger, LLC
-
-Licensed under the AGPLv3: https://www.gnu.org/licenses/agpl-3.0.html
+2. Подготовить файл docker-compose.yml содержащий все необходимые сервисы (контейнеры) для запуска приложения (.jar файла), которое было собрано в рамках первой задачи.
+Также необходимо сконфигурировать приложение для запуска на локальном порту хостовой OC, при этом для облачных сервисов, достаточно указать валидные параметры, без реальных сервисов, достаточно, чтоб приложение запускалось и слушало указанный в конфигурации порт.
+Решением по данной задаче должен быть файл docker-compose.yml, все необходимые файлы для запуска приложения в среде docker (config.yml, docker entrypoint и т.п.) и readme файл с инструкцией по запуску.
+Будет плюсом использование БД в конфигурации master-slave.
